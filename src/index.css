@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+body {
+  background: linear-gradient(170deg, #0c0a09 0%, #1a1008 40%, #1a100a 60%, #0c0a09 100%);
+  background-attachment: fixed;
+  color: #fafafa;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
