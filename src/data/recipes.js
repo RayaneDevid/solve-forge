@@ -7,7 +7,7 @@ export const resources = {
   lingot_de_fer:        { label: "Lingot de fer",        image: "/assets/ressources/lingot_de_fer.png" },
   aluminium:            { label: "Aluminium",            image: "/assets/ressources/aluminium.png" },
   lingot_dor:           { label: "Lingot d'or",          image: "/assets/ressources/lingot_dor.png" },
-  eclat_de_lune:        { label: "Éclat de lune",        image: "/assets/ressources/eclate_de_lune.png" },
+  eclat_de_lune:        { label: "Éclat de lune",        image: "/assets/ressources/eclat_de_lune.png" },
   coeur_de_lune:        { label: "Coeur de lune",        image: "/assets/ressources/coeur_de_lune.png" },
   parchemin_dore:       { label: "Parchemin doré",       image: "/assets/ressources/parchemin_dore.png" },
   artefact:             { label: "Artefact",             image: "/assets/ressources/artefact.png" },
