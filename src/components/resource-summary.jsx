@@ -32,8 +32,14 @@ export default function ResourceSummary({ quantities, onReset }) {
     coeur_de_lune:      (n) => `= ${n * 4} Éclats de lune`,
   };
 
+  const craftedItems = Object.entries(quantities)
+    .filter(([, qty]) => qty > 0)
+    .map(([id, qty]) => `- ${recipes[id]?.label || id} : ${qty}`);
+
   const handleCopy = () => {
-    const text =
+    const itemsSection =
+      "🔨 Équipements à forger :\n" + craftedItems.join("\n");
+    const resourcesSection =
       "📦 Ressources nécessaires :\n" +
       sortedResources
         .map(([id, total]) => {
@@ -42,7 +48,7 @@ export default function ResourceSummary({ quantities, onReset }) {
           return `- ${label} : ${total}${bd}`;
         })
         .join("\n");
-    navigator.clipboard.writeText(text);
+    navigator.clipboard.writeText(`${itemsSection}\n\n${resourcesSection}`);
   };
 
   return (
