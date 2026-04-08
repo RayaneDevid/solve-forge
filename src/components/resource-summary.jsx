@@ -27,9 +27,13 @@ export default function ResourceSummary({ quantities, onReset }) {
     lin:                (n) => `= ${n * 4} Laines`,
     lingot_dor:         (n) => `= ${n * 4} Or brut`,
     lingot_de_fer:      (n) => `= ${n * 4} Fer brut`,
+    lingot_dacier:      (n) => `= ${n * 4} Acier brut`,
+    lingot_de_cuivre:   (n) => `= ${n * 4} Cuivre brut`,
     lingot_dobsidienne: (n) => `= ${n * 4} Obsidienne brut`,
     lingot_demeraude:   (n) => `= ${n * 4} Émeraudes`,
     coeur_de_lune:      (n) => `= ${n * 4} Éclats de lune`,
+    diamant_raffine:    (n) => `= ${n * 2} Diamants bruts`,
+    diamant_pur:        (n) => `= ${n * 2} Diamants raffinés (= ${n * 4} Diamants bruts)`,
   };
 
   const craftedItems = Object.entries(quantities)
