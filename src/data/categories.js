@@ -24,4 +24,5 @@ export const categories = [
       { id: "chest_armor", label: "Armure" },
     ],
   },
+  { id: "katana", label: "Katanas", icon: "⚔️" },
 ];

@@ -37,6 +37,8 @@ export const resources = {
   diamant_raffine:      { label: "Diamant raffiné",      image: "/assets/ressources/diamant_raffine.png" },
   parchemin_legendaire: { label: "Parchemin légendaire", image: "/assets/ressources/parchemin_legendaire.png" },
   daim:                 { label: "Daim",                 image: "/assets/ressources/daim.png" },
+  baton_de_bois:        { label: "Bâton de bois",        image: "/assets/ressources/baton_de_bois.png" },
+  magnesium_brut:       { label: "Magnésium brut",       image: "/assets/ressources/magnesium_brut.png" },
 };
 
 export const recipes = {
@@ -236,5 +238,19 @@ export const recipes = {
   torse_armor_t4: {
     label: "Torse Armure T4", tier: 4, category: "chest_armor", image: "/assets/chest/armor/t4.png",
     resources: { lingot_dacier: 8, ficelle: 8, pierre_volcanique: 2, lingot_dobsidienne: 1, daim: 8 },
+  },
+
+  // ── KATANAS ──────────────────────────────────
+  katana_t2: {
+    label: "Katana Simple", tier: 2, category: "katana", image: "/assets/katana/t2.png",
+    resources: { baton_de_bois: 4, lingot_dacier: 4, magnesium_brut: 4 },
+  },
+  katana_t3: {
+    label: "Katana Affûté", tier: 3, category: "katana", image: "/assets/katana/t3.png",
+    resources: { baton_de_bois: 8, lingot_dacier: 6, magnesium_brut: 6, lingot_dor: 1 },
+  },
+  katana_t4: {
+    label: "Katana Noble", tier: 4, category: "katana", image: "/assets/katana/t4.png",
+    resources: { lingot_dacier: 6, magnesium_brut: 6, lingot_dor: 1, baton_de_bois: 8, perle_de_nacre: 2 },
   },
 };

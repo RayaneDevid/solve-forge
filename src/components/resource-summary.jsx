@@ -22,11 +22,25 @@ export default function ResourceSummary({ quantities, onReset }) {
 
   const isEmpty = sortedResources.length === 0;
 
+  const breakdowns = {
+    daim:               (n) => `= ${n * 2} Laines, ${n * 2} Tissus`,
+    lin:                (n) => `= ${n * 4} Laines`,
+    lingot_dor:         (n) => `= ${n * 4} Or brut`,
+    lingot_de_fer:      (n) => `= ${n * 4} Fer brut`,
+    lingot_dobsidienne: (n) => `= ${n * 4} Obsidienne brut`,
+    lingot_demeraude:   (n) => `= ${n * 4} Émeraudes`,
+    coeur_de_lune:      (n) => `= ${n * 4} Éclats de lune`,
+  };
+
   const handleCopy = () => {
     const text =
       "📦 Ressources nécessaires :\n" +
       sortedResources
-        .map(([id, total]) => `- ${resources[id]?.label || id} : ${total}`)
+        .map(([id, total]) => {
+          const label = resources[id]?.label || id;
+          const bd = breakdowns[id] ? ` (${breakdowns[id](total)})` : "";
+          return `- ${label} : ${total}${bd}`;
+        })
         .join("\n");
     navigator.clipboard.writeText(text);
   };
